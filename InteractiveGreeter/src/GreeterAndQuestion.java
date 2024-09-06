@@ -21,11 +21,12 @@ public class GreeterAndQuestion {
 		
 		System.out.println("How old are you?\n");
 		age = scn.nextInt();
+		scn.nextLine();
 		
 		System.out.printf("Hello %s, you are from %s and are %d years old!\n", name, originalLocation, age);
 		
 		System.out.println("What is one of your favorite hobbies?\n");
-		hobby = scn.next();
+		hobby = scn.nextLine();
 		
 		
 		System.out.printf("That's really cool that you like %s!\n", hobby);
