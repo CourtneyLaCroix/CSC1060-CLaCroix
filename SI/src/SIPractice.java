@@ -5,10 +5,7 @@ public class SIPractice {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		
-		1 = "pizza";
-		2 = "wings";
-		3 = "Salad";
-				
+		
 		
 		System.out.printf("The menu is  \n 1: pizza\n 2: wings\n 3: Salad");
 		System.out.println("please enter what you would like to order (max 3 items)");
