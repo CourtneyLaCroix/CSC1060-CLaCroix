@@ -17,12 +17,17 @@ public class BeerBottles {
 			beerBottles--;
 			System.out.printf("Take one down and pass it around, %d bottles of beer on the wall.\n",
 					beerBottles);
+			if (beerBottles == 2) {
+				beerBottles--;
+			}
 			
-			if (beerBottles >= 1) {	
+			} 
+		
+			if (beerBottles == 1) {	
 				System.out.printf("2 bottles of beer on the wall, 2 bottles of beer\nTake one down and pass it around, 1 bottle of beer on the wall.\n");
 				beerBottles--;
-			} 
-			if (beerBottles >= 0) {
+				
+			if (beerBottles == 0) {
 				System.out.printf("1 bottle of beer on the wall, 1 bottle of beer.\n"
 						+ "Take one down and pass it around, 0 bottles of beer on the wall.\n"
 						+ "0 bottles of beer on the wall, 0 bottles of beer.\n"
