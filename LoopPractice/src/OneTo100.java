@@ -26,13 +26,12 @@ public class OneTo100 {
 			    }
 		}
 		
-		
+
 	}
-	
+
 	public static void mulTable(int height, int width) {
 		for (int x = 1; x <= height; x++) {
 			for (int y = 1; y <= width; y++) {
-				
 				System.out.printf("%4d", x * y);
 			}
 			System.out.println();
