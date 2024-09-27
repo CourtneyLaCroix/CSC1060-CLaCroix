@@ -15,8 +15,8 @@ public class TempConverter {
 	double cel = (fah - 32) * (5.0/9);
 	double kel = 273.5 + ((fah - 32.0) * (5.0/9.0));
 	
-	x = 1;
-	2 = y; 
+	int x = 1;
+	int y = 2; 
 	
 	System.out.print(x + y);
 	
