@@ -4,17 +4,17 @@ public class CalculateGrades {
 
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		
+
 		double userInputGrade;
-		
+
 		System.out.println("Please enter your grade:");
 		userInputGrade = scn.nextDouble();
-		
+
 		System.out.printf("You have entered the numaric grade: %.2f, your letter grade is: %s", 
 				userInputGrade, getLetterGrade(userInputGrade));
 
 	}
-	
+
 	public static String getLetterGrade(double userInputGrade) {
 		if (userInputGrade >= 92.00) {
 			return "A";
@@ -53,5 +53,5 @@ public class CalculateGrades {
 			return "error";
 		}
 		return "error";
-}
+	}
 }
