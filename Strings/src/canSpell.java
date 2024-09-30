@@ -14,6 +14,13 @@ public class canSpell {
 		System.out.println("Please enter a word you see! We'll check if you have it");
 		String userWord = scn.next();
 		
+		if (isScrabble(scrabbleLetters,userWord)) {
+			System.out.println("You're word IS in the tiles");
+		}
+		else {
+			System.out.println("You're word is NOT in the tiles");
+		}
+		
 
 	}
 	public static boolean isScrabble(String scrabbleLetters, String userWord) {
@@ -25,10 +32,10 @@ public class canSpell {
 			
 			for(int j = 0; j > userWordLower.length(); j++) {
 				if (letter == userWordLower.charAt(j)) {
-					return true;
 				}
 				
 			}
+			
 		}
 	}
 }
