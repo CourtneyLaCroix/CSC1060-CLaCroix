@@ -15,7 +15,7 @@ public class canSpell {
 		String userWord = scn.next();
 		
 		if (isScrabble(scrabbleLetters,userWord)) {
-			System.out.println("You're word IS in the tiles");
+			System.out.println("Your word IS in the tiles");
 		}
 		else {
 			System.out.println("You're word is NOT in the tiles");
@@ -25,21 +25,23 @@ public class canSpell {
 	}
 	public static boolean isScrabble(String scrabbleLetters, String userWord) {
 		String userWordLower = userWord.toLowerCase();
-		String newString = "";
 		
-		for (int i = 0; i < scrabbleLetters.length(); i++) {
-			char letter = scrabbleLetters.charAt(i);
+		
+		for (int i = 0; i < userWordLower.length(); i++) {
+			String letter = userWordLower.substring(i,i+1);
+			boolean found = false;
 			
-			
-			for(int j = 0; j < userWordLower.length(); j++) {
-				if (letter == userWordLower.charAt(j)) {
-				newString = newString + letter;
+			for(int j = 0; j < scrabbleLetters.length(); j++) {
+				if (letter.charAt(0) == scrabbleLetters.charAt(j)) {
+					scrabbleLetters = scrabbleLetters.replaceFirst(letter, " ");
+					found = true;
+					break;
 				}
 			}
-		if (userWordLower == newString) {
-			return true;
+			if (!found) {
+				return false;
+			}
 		}
-		}
-		return false;
+		return true;
 	}
 }
