@@ -25,5 +25,13 @@ public class ArrayExercises {
 		return false;
 	
 	}
+	
+	public static int ArrayReverse(int[] scr) {
+		int[] newNumbers = new int[];
+		
+		for(int i = 0; i < scr.length; i++) {
+			newNumbers[i] = scr[0];
+		}
+	}
 
 }

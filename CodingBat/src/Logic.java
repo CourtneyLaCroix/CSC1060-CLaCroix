@@ -17,6 +17,7 @@ public class Logic {
 	  }
 	}
 	public String alarmClock(int day, boolean vacation) {
+
 	  if(!vacation && (day >= 1 && day <= 6)){
 		    return "7:00";
 		  }
@@ -32,3 +33,22 @@ public class Logic {
 		  return -1;
 
 }
+	
+	public String plusOut(String str, String word) {
+	    String newString = "";
+			int wordCheck = str.indexOf(word);
+
+			for (int i = 0; i < str.length(); i++){
+				if (str.charAt(i) == word.charAt(0)){
+					for (int j = 0; i <= word.length(); j++){
+						return newString = newString + word.charAt(j);
+					}
+				}
+				else{
+					return "+";
+				}
+			}
+		}
+	}
+
+
