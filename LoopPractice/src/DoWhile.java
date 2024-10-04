@@ -9,7 +9,11 @@ public class DoWhile {
 		int userNumber = scn.nextInt();
 		int totalSum = 0;
 		
+		
 		do{
+			if (userNumber == 0) {
+				break;
+			}
 			totalSum = totalSum + userNumber;
 			System.out.println("Please enter a another number\n"
 					+ "Enter 0 to exit");
@@ -20,6 +24,8 @@ public class DoWhile {
 		}
 		// Condition check
 		while (userNumber > 0);
+		
+		System.out.println("you have exited");
 	}
 
 }
