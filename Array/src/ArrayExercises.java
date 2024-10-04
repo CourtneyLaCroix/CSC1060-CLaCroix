@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class ArrayExercises {
 
@@ -14,15 +15,15 @@ public class ArrayExercises {
 		//else {
 			//System.out.printf("the value: %d is NOT in the array", value);
 		//}
+		//for (int i = 0; i < numbers.length; i++) {
+			//System.out.println(numbers[i]);
+	//	}
+		randomizeArray(numbers);
 		for (int i = 0; i < numbers.length; i++) {
-			System.out.println(numbers[i]);
-		}
-		ArraySwap(numbers);
-		for (int i = 0; i < numbers.length; i++) {
-			System.out.println(numbers[i]);
+			System.out.print(numbers[i] + " ");
 		}
 		
-		System.out.println(Arrays.toString(findCommon(numbers, numbers2)));
+		//System.out.println(Arrays.toString(findCommon(numbers, numbers2)));
 		
 
 	}
@@ -90,6 +91,18 @@ public class ArrayExercises {
 		}
 		return matches;
 	}
-
+	
+	public static int[] randomizeArray(int[] scr) {
+		Random random = new Random();
+		
+		for (int i = 0; i < scr.length; i++) {
+			int tempArray = scr[i];
+			int randomIndex = random.nextInt(0, scr.length);
+			scr[i] = scr[randomIndex];
+			scr[randomIndex] = tempArray; 
+		}
+		return scr;
+		
+	}
 }
 
