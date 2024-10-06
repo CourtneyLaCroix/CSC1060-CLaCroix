@@ -85,4 +85,59 @@ public class CodingBatSolutionsImProudOf {
 		}
 		return "";
 	}
+
+	public int centeredAverage(int[] nums) {
+		  int smallest = nums[0];
+		  int largest = nums[0];
+		  int sum = 0;
+		  
+		  for (int i = 0; i < nums.length; i++){
+		    smallest = Math.min(smallest, nums[i]);
+		    largest = Math.max(largest, nums[i]);
+		    
+		    sum = sum + nums[i];
+		  }
+		  
+		  sum = sum - largest;
+		  sum = sum - smallest;
+		  
+		  return sum /( nums.length -2);
+		}
+
+	public int sum13(int[] nums) {
+		int sum = 0;
+
+		if (nums.length == 0){  
+			return 0;
+		}
+
+		for (int i = 0; i < nums.length; i++){
+			if (nums[i] == 13 && i < nums.length -1){
+				nums [i + 1] = 0;
+				nums [i] = 0;
+			}
+			if (nums[i] == 13) {
+				nums[i] = 0;
+			}
+			sum = sum + nums[i];
+		}
+
+		return sum;
+	}
+
+	public int[] shiftLeft(int[] nums) {
+		if (nums.length == 0){
+			return nums;
+		}
+
+		int temp = nums[0];
+		for (int i = 0; i < nums.length -1; i++){
+			nums[i] = nums[i+1];
+		}
+
+		nums[nums.length -1] = temp;
+		return nums;
+	}
+
+
 }

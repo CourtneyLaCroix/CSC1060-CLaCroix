@@ -43,8 +43,6 @@ public class ArrayExercises {
 		int[] newNumbers = new int[scr.length]; 
 		
 		for(int i = scr.length; i >= scr.length / 2; i--) {
-			
-			
 			newNumbers[0] = scr[i];
 		}
 	return newNumbers;
