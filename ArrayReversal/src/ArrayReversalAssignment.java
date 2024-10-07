@@ -27,6 +27,7 @@ public class ArrayReversalAssignment {
 		
 		int[] userNums = new int[arraySize]; //sets arraySize
 		int userVal = 0;
+		int trackInt = 0;
 		
 		System.out.println("Please enter numbers for your array!\n"
 				+ "I will reverse it after you hit the array size\n"
@@ -37,50 +38,47 @@ public class ArrayReversalAssignment {
 			userVal = scn.nextInt();
 			userNums[i] = userVal;
 			if (userVal == -1 ) {
+				
 				break; // if negative 1 is entered, break from loop
 			}
+			trackInt++;
 		}	
 		
-		AdjustArray(userNums); // SHOULD remove -1 and 0's
-			
+		int[] newArray = AdjustArray(userNums, trackInt);
+		
+		
+		
+		System.out.println(trackInt);
+	
 		System.out.println("Your entered array:");
-		for (int i = 0; i < userNums.length; i++) {
-			System.out.print(userNums[i] + " ");
+		for (int i = 0; i < newArray.length; i++) {
+			System.out.print(newArray[i] + " ");
 		}
 		System.out.println();
 		
-		ArrayReverse(userNums); 
+		ArrayReverse(newArray); 
 		
 		System.out.println("Your array reversed:\n");
-		for (int i = 0; i < userNums.length; i++) {
-			System.out.print(userNums[i] + " ");
+		for (int i = 0; i < newArray.length; i++) {
+			System.out.print(newArray[i] + " ");
 		}
 	}
-	public static int[] ArrayReverse(int[] scr) { // reverses array
+	public static void ArrayReverse(int[] scr) { // reverses array
 		
 		for(int i = 0; i < scr.length / 2; i++) {
 			int temp = scr[i];
 			scr[i] = scr[scr.length -i -1];
 			scr[scr.length -i -1] = temp;
 		}
-	return scr;
 	}
 	
-	public static int[] AdjustArray(int[] scr) { //finds the value of -1, removes it and 0's after it
-		int newArrayLength = 0;
-		
-		for (int i = 0; i < scr.length; i++) {
-			if (scr[i] == -1) {
-				int remainder = scr.length - i;
-				newArrayLength = scr.length - remainder;
-			}
-		}
-		int []returnArray = new int[newArrayLength];
-		
-		for (int i = 0; i < returnArray.length; i++) {
-			returnArray[i] = scr[i];
-		}
-		return returnArray;
+	public static int[] AdjustArray(int[] scr, int value) { //takes in array and the value of where -1 was entered
+		int[] adjustedArray = new int[value];
+		for (int i = 0; i < adjustedArray.length; i++) { 
+			adjustedArray[i] = scr[i];
+
+		}	
+		return adjustedArray;
 	}
 
 }
