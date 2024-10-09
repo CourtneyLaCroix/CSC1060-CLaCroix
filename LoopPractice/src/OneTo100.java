@@ -14,7 +14,7 @@ public class OneTo100 {
 		int width = scn.nextInt();
 		
 		
-		inOrder(height, width);
+		mulTable(height, width);
 		
 	}
 	
