@@ -6,12 +6,18 @@ public class Car {
 	private int mileage;
 	private double amountOfGas;
 	private boolean isClean = false;
+	private SteeringWheel stWheel;
+	private Wheel[] wheels = new Wheel[4];
 	
 	//constructor
 	public Car () {
 		color = "Grey";
 		mileage = 4;
 		amountOfGas = 2.0;
+		stWheel = new SteeringWheel(true, "leather");
+		for (int i = 0; i < wheels.length; i++) {
+			wheels[i] = new Wheel(15, "Iron");
+		}
 	}
 	
 	public Car(String color, int mileage) {
