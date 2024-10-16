@@ -25,8 +25,6 @@ public class OneTo100 {
 					System.out.println();
 			    }
 		}
-		
-
 	}
 
 	public static void mulTable(int height, int width) {

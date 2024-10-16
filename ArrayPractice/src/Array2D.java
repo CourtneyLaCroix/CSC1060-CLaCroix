@@ -17,15 +17,11 @@ public class Array2D {
 		int [][] my2DimThree = {{1,2,3}, 
 								{4,5,6}, 
 								{7,8,9}
-								};
-		
-		//print2D(my2DimThree);
+								};	
+		printMe(my2DimThree);
 		tempArr = mulTable(size);
 		
-		
-		
 		print2D(transpose(my2DimThree));
-		
 		
 	}
 	
