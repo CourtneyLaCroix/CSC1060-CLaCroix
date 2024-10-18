@@ -49,7 +49,7 @@ public class LogicKnowledge {
 		int largest = Math.max(Math.max(a, b), c); //compares (a,b) then result to c
 		int smallest = Math.min(Math.min(a, b), c); //compares (a,b) then result to c
 
-		int middle = largest - smallest;
+		int middle = ((a + b + c) - largest) - smallest;
 
 		if (Math.abs(largest - middle) == Math.abs(middle - smallest)) {
 			return true;
