@@ -3,6 +3,7 @@ public class Array {
 
 	public static void main(String[] args) {
 		int num;
+		int[] Pi = {3, 1, 4};
 		
 		int[] numbers;
 		
