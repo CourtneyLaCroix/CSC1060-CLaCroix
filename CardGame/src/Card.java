@@ -40,6 +40,19 @@ public class Card {
 	public void setSuit(int suit) {
 		this.suit = suit;
 	}
+	
+	
+	public int compareTo(Card otherCard) {
+		if (rank < otherCard.rank) {
+			return -5;
+		}
+		else if(rank > otherCard.rank) {
+			return 5;
+		}
+		else {
+			return 0;
+		}
+	}
 
 
 	public String toString() {

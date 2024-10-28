@@ -3,6 +3,7 @@ import java.util.Random;
 
 public class Deck {
 	private Card[] cards;
+	private Random random = new Random();
 	
 	public Deck() {
 		this.cards = new Card[52];
@@ -16,6 +17,10 @@ public class Deck {
 		}
 	}
 
+	public Deck(int numCards) {
+		this.cards = new Card[numCards];
+	}
+
 	public Card[] getCards() {
 		return cards;
 	}
@@ -25,7 +30,6 @@ public class Deck {
 	}
 	
 	public void shuffle() {
-		Random random = new Random();
 		
 		for (int i = 0; i < cards.length; i++) {
 			Card temp = cards[i];
@@ -35,6 +39,17 @@ public class Deck {
 		}
 	}
 
+	public Deck subdeck(int start, int end) {
+		Deck subdeck = new Deck(end - start + 1);
+		int j = 0;
+		for(int i = start; i <= end; i++) {
+			subdeck.cards[j] = this.cards[i];
+			j++;
+		}
+		return subdeck;
+	}
+	
+	
 	public String toString() {
 		return "Deck: " + Arrays.toString(cards);
 	}
