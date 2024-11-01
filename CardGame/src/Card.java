@@ -53,6 +53,18 @@ public class Card {
 			return 0;
 		}
 	}
+	
+	public int compareSuit(Card otherCard) {
+		if (suit < otherCard.suit) {
+			return -5;
+		}
+		else if(suit > otherCard.suit) {
+			return 5;
+		}
+		else {
+			return 0;
+		}
+	}
 
 
 	public String toString() {

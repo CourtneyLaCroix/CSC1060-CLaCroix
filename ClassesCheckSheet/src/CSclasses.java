@@ -27,9 +27,6 @@ public class CSclasses {
 			
 		}
 		
-		//System.out.println(Arrays.toString(courseList));
-		//for (Card cd: oPile.cards) {              //for EACH Card (type) card IN decks
-				//	cards.add(cd);
 		for (Course course: courseList) {
 			System.out.println(printCourse(course));
 		}

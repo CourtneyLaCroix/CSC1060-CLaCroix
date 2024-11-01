@@ -50,9 +50,64 @@ public class Deck {
 	}
 	
 	
+	public void sort(){
+        int n = cards.length;
+        for (int i = 0; i < n - 1; i++) {
+          
+            // Assume the current position holds
+            // the minimum element
+            int min_idx = i;
+
+            // Iterate through the unsorted portion
+            // to find the actual minimum
+            for (int j = i + 1; j < n; j++) {
+                if (cards[j].compareTo(cards[min_idx]) < 0) {
+                	
+                    // Update min_idx if a smaller element
+                    // is found
+                    min_idx = j;
+                }
+            }
+
+            // Move minimum element to its
+            // correct position
+            Card temp = cards[i];
+            cards[i] = cards[min_idx];
+            cards[min_idx] = temp;           
+        }
+	}
+	public void sortBySuit(){
+        int n = cards.length;
+        for (int i = 0; i < n - 1; i++) {
+          
+            // Assume the current position holds
+            // the minimum element
+            int min_idx = i;
+
+            // Iterate through the unsorted portion
+            // to find the actual minimum
+            for (int j = i + 1; j < n; j++) {
+                if (cards[j].compareSuit(cards[min_idx]) < 0) {
+                	
+                    // Update min_idx if a smaller element
+                    // is found
+                    min_idx = j;
+                }
+            }
+
+            // Move minimum element to its
+            // correct position
+            Card temp = cards[i];
+            cards[i] = cards[min_idx];
+            cards[min_idx] = temp;           
+        }
+	}
+	
+	
 	public String toString() {
 		return "Deck: " + Arrays.toString(cards);
 	}
+	
 	
 	
 	

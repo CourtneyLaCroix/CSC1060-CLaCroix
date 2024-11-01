@@ -25,6 +25,8 @@ public class Driver {
 		Person per1 = new Person("John", "Galt", 6, 175.5);
 		
 		System.out.println(per1);
+		
+		Car.cleanCar(myCar);
 	}
 
 
