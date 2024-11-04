@@ -67,6 +67,10 @@ public class Car {
 		isClean = true;
 	}
 	
+	public static void cleanCar(Car car) {
+		car.isClean = true;
+	}
+	
 	//toString
 	public String toString() {
 		String str = "Color " + color 

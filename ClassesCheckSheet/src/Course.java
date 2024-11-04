@@ -1,11 +1,17 @@
+import java.util.List;
 
 public class Course {
+	private static int courseCounter = 0;
+	private final int courseID;
 	private String courseNumber;
 	private int numStudents;
 	private int maxStudents;
 	private int credits;
+	private List<Student> students;
 	
 	public Course() {
+		courseCounter++;
+		courseID = courseCounter;
 		courseNumber = "CSC 1060";
 		numStudents = 0;
 		maxStudents = 0;
@@ -14,6 +20,8 @@ public class Course {
 	
 	public Course(String courseNumber, int numStudents, int maxStudents, int credits) {
 		super();
+		courseCounter++;
+		courseID = courseCounter;
 		this.courseNumber = courseNumber;
 		this.numStudents = numStudents;
 		this.maxStudents = maxStudents;
@@ -52,14 +60,18 @@ public class Course {
 		this.credits = credits;
 	}
 
-	
+	public void addStudent(Student std) {
+		students.add(std);
+	}
 	
 	public String toString() {
 		return "Course Number: " + courseNumber + 
 				"\nNumber of Students: " + numStudents + 
 				"\nMax Students: " + maxStudents +
 				"\ncredits: " + credits +
+				"course ID:" + courseID +
 				"\n";
+		
 	}
 	
 	
