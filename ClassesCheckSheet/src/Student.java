@@ -7,7 +7,7 @@ public class Student {
 	private String firstName;
 	private String lastName;
 	private long sNumber;
-	private List<Course> courses;
+	private List<Course> coursesList = new ArrayList<>();
 	
 	
 	public Student() {
@@ -16,7 +16,7 @@ public class Student {
 		firstName = "";
 		lastName = "";
 		sNumber = 0;
-		courses = new ArrayList<>();
+		coursesList = new ArrayList<>();
 	}
 	
 	public Student(String firstName, String lastName, long number) {
@@ -26,7 +26,7 @@ public class Student {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.sNumber = sNumber;
-		this.courses = courses;
+		this.coursesList = coursesList;
 	}
 
 	public String getFirstName() {
@@ -54,18 +54,26 @@ public class Student {
 	}
 
 	public List<Course> getCourses() {
-		return courses;
+		return coursesList;
 	}
 
 	public void setCourses(List<Course> courses) {
-		this.courses = courses;
+		this.coursesList = courses;
 	}
 
 	public void addCourse(Course crs) {
-		courses.add(crs);
+		coursesList.add(crs);
 	}
 	public boolean removeCourse(Course crs) {
-		return courses.remove(crs);
+		return coursesList.remove(crs);
+	}
+	
+	public List<Course> getCourseList(){
+		return coursesList;
+	}
+	
+	public int getID() {
+		return ID;
 	}
 	
 	
@@ -81,7 +89,7 @@ public class Student {
 	public String toString() {
 		return "Student: " + firstName + 
 				"\n\tsNumber: " + sNumber + 
-				"\n\tcourses: " + courses +
+				"\n\tcourses: " + coursesList +
 				"\n\tStudent ID" + ID;
 	}
 

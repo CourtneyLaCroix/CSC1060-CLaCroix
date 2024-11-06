@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Course {
@@ -7,14 +8,14 @@ public class Course {
 	private int numStudents;
 	private int maxStudents;
 	private int credits;
-	private List<Student> students;
+	private List<Student> studentList = new ArrayList<>();
 	
 	public Course() {
 		courseCounter++;
 		courseID = courseCounter;
 		courseNumber = "CSC 1060";
 		numStudents = 0;
-		maxStudents = 0;
+		maxStudents = 25;
 		credits = 0;
 	}
 	
@@ -61,15 +62,29 @@ public class Course {
 	}
 
 	public void addStudent(Student std) {
-		students.add(std);
+		if (numStudents >= maxStudents) {
+			System.err.println("Error: Cannot exeed max students");
+			return;
+		}
+		studentList.add(std);
+		numStudents++;
 	}
+	
+	public int getID() {
+		return courseID;
+	}
+	
+	public List<Student> getStudentList(){
+		return studentList;
+	}
+	
 	
 	public String toString() {
 		return "Course Number: " + courseNumber + 
-				"\nNumber of Students: " + numStudents + 
-				"\nMax Students: " + maxStudents +
-				"\ncredits: " + credits +
-				"course ID:" + courseID +
+				"\n\t\tNumber of Students: " + numStudents + 
+				"\n\t\tMax Students: " + maxStudents +
+				"\n\t\tcredits: " + credits +
+				"\n\t\tcourse ID:" + courseID +
 				"\n";
 		
 	}
