@@ -47,7 +47,7 @@ public class StringSorting {
 		return myArr;
 	}
 	
-	static void bubbleSort(String arr[]){
+	public static void bubbleSort(String arr[]){
         int n = arr.length;
        
         for (int i = 0; i < n - 1; i++) {
