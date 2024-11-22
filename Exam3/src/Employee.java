@@ -3,8 +3,8 @@ public class Employee extends Person{
 	private int office;
 	private double salary;
 	private int dateHired;
-	
-	
+
+
 	public Employee(String name, String address, String phoneNumber, String emailAddress, int office, double salary,
 			int dateHired) {
 		super(name, address, phoneNumber, emailAddress);
@@ -51,10 +51,4 @@ public class Employee extends Person{
 				"\n\tsalary: " + salary + 
 				"\n\tdateHired: " + dateHired;
 	}
-	
-	
-	
-	
-	
-	
 }

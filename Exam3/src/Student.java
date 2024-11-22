@@ -2,7 +2,7 @@
 public class Student extends Person{
 	private int status;
 
-	
+
 	public final String[] STATUS = {
 			null, "freshman", "sophomore", "junior", "senior"
 	};
@@ -22,7 +22,7 @@ public class Student extends Person{
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	
+
 	public String toString() {
 		return STATUS[status];
 	}

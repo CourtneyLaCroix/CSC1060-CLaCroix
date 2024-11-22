@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Faculty extends Employee{
 	private String officeHours;
 	private int rank;
-	
+
 	public final String[] RANK = {
 			null, "junior", "senior"
 	};
@@ -37,8 +37,4 @@ public class Faculty extends Employee{
 				"\n\tofficeHours: " + officeHours +
 				"rank: " + RANK[rank];
 	}
-	
-	
-	
-	
 }

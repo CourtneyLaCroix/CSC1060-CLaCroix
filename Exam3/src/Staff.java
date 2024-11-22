@@ -20,6 +20,6 @@ public class Staff extends Employee{
 	public String toString() {
 		return "Staff: " + title;
 	}
-	
-	
+
+
 }
