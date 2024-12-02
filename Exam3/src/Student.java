@@ -4,7 +4,7 @@ public class Student extends Person{
 
 
 	public final String[] STATUS = {
-			null, "freshman", "sophomore", "junior", "senior"
+		null, "freshman", "sophomore", "junior", "senior"
 	};
 
 

@@ -5,7 +5,7 @@ public class Faculty extends Employee{
 	private int rank;
 
 	public final String[] RANK = {
-			null, "junior", "senior"
+		null, "junior", "senior"
 	};
 
 	public Faculty(String name, String address, String phoneNumber, String emailAddress, int office, double salary,
