@@ -39,8 +39,8 @@ public class Die {
 	}
 	
 	public int roll() {
-		int rnum = rand.nextInt(numSides - 1);
-		value =  (rnum) + 1 ;
+		int rnum = rand.nextInt(1, numSides + 1);
+		value =  (rnum) + 1;
 		
 		return value;
 	}

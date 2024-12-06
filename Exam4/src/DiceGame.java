@@ -8,7 +8,7 @@ public class DiceGame {
 
 	public static void main(String[] args) throws IOException {
 		Scanner scn = new Scanner(System.in);
-		File myFile = new File("battlegame.csv");
+		File myFile = new File("battlegame.txt");
 		FileWriter fileWriter = new FileWriter(myFile.getName(), true);
 		BufferedWriter bw = new BufferedWriter(fileWriter);
 		
@@ -26,6 +26,8 @@ public class DiceGame {
 		System.out.println("How many sides do the die have?");
 		int numSides = scn.nextInt();
 		
+		Die masterDie = new Die(numSides);
+		
 		System.out.println("How many Players will there be?");
 		int numPlayers = scn.nextInt();
 		
@@ -38,6 +40,7 @@ public class DiceGame {
 		for (Player p : players) {
 			System.out.println("what is this the players name?");
 			p.setName(scn.next());
+			p.setDie(masterDie);
 		}
 		
 		for (Player p : players) {
