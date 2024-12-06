@@ -26,7 +26,6 @@ public class DiceGame {
 		System.out.println("How many sides do the die have?");
 		int numSides = scn.nextInt();
 		
-		Die masterDie = new Die(numSides);
 		
 		System.out.println("How many Players will there be?");
 		int numPlayers = scn.nextInt();
@@ -40,7 +39,7 @@ public class DiceGame {
 		for (Player p : players) {
 			System.out.println("what is this the players name?");
 			p.setName(scn.next());
-			p.setDie(masterDie);
+			p.setDie(new Die(numSides));
 		}
 		
 		for (Player p : players) {
@@ -63,15 +62,15 @@ public class DiceGame {
 	}
 	
 	public static Player decideWinner(Player[] p) {
-
-		for (int i = 0; i < p.length - 1; i++) {
-			if (p[i].getDie().getValue() > p[i + 1].getDie().getValue()) {
-				return p[i];
-			} else {
-				return p[i + 1];
+		Player highestPoints = new Player();
+		
+		for (Player player: p) {
+			if (player.getDie().getValue() > highestPoints.getDie().getValue()) {
+				highestPoints = player;
 			}
 		}
-		return null;
+		return highestPoints;
+		
 	}
 
 }

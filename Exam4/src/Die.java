@@ -8,7 +8,7 @@ public class Die {
 	
 	public Die() {
 		numSides = 6;
-		value = 1;
+		value = -1;
 	}
 	
 	public Die(int numSides) {
@@ -40,7 +40,7 @@ public class Die {
 	
 	public int roll() {
 		int rnum = rand.nextInt(1, numSides + 1);
-		value =  (rnum) + 1;
+		value =  (rnum);
 		
 		return value;
 	}
